@@ -1,4 +1,4 @@
-StoreID,PODate,ReceivingDate,Quantity,ItemId
+StoreID,PODate,ReceivingDate,Quantity,ItemID
 1,2015-12-22,2016-01-01,6,5255
 1,2015-12-20,2016-01-01,12,8358
 1,2015-12-20,2016-01-01,23,4233

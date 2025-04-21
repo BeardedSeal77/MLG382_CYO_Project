@@ -114,7 +114,7 @@ def split_inventory_id(df):
     return df_copy
 
 # ----------------------------------------------------------------------------------
-# Create Sales.csv (StoreID, ItemId, SalesQuantity, SalesDate)
+# Create Sales.csv (StoreID, ItemID, SalesQuantity, SalesDate)
 # ingests and cleans the sales data
 # returns a DataFrame with cleaned sales data and saves it to a CSV file
 def process_sales_data(raw_path, processed_path):
@@ -135,8 +135,9 @@ def process_sales_data(raw_path, processed_path):
     # Drop the Location column after splitting the InventoryId
     sales_cleaned.drop(columns=['Location'], inplace=True)
     
-    # Rename 'Store' column to 'StoreID'
+    # Rename columns
     sales_cleaned.rename(columns={'Store': 'StoreID'}, inplace=True)
+    sales_cleaned.rename(columns={'ItemId': 'ItemID'}, inplace=True)
     
     # Save the cleaned Sales.csv
     sales_cleaned.to_csv(os.path.join(processed_path, 'Sales.csv'), index=False)
@@ -144,7 +145,7 @@ def process_sales_data(raw_path, processed_path):
     return sales_cleaned
 
 # ----------------------------------------------------------------------------------
-# Create Purchases.csv (StoreID, ItemId, Quantity, PODate, ReceivingDate)
+# Create Purchases.csv (StoreID, ItemID, Quantity, PODate, ReceivingDate)
 # ingests and cleans the purchases data
 # returns a DataFrame with cleaned purchases data and saves it to a CSV file
 def process_purchases_data(raw_path, processed_path):
@@ -165,8 +166,9 @@ def process_purchases_data(raw_path, processed_path):
     # Drop the Location column after splitting the InventoryId
     purchases_cleaned.drop(columns=['Location'], inplace=True)
     
-    # Rename 'Store' column to 'StoreID'
+    # Rename columns
     purchases_cleaned.rename(columns={'Store': 'StoreID'}, inplace=True)
+    purchases_cleaned.rename(columns={'ItemId': 'ItemID'}, inplace=True)
     
     # Save the cleaned Purchases.csv
     purchases_cleaned.to_csv(os.path.join(processed_path, 'Purchases.csv'), index=False)
@@ -174,7 +176,7 @@ def process_purchases_data(raw_path, processed_path):
     return purchases_cleaned
 
 # ----------------------------------------------------------------------------------
-# Create OpeningStock.csv (StoreID, ItemId, onHand, startDate)
+# Create OpeningStock.csv (StoreID, ItemID, onHand, startDate)
 # ingests and cleans the opening stock data
 # returns a DataFrame with cleaned opening stock data and saves it to a CSV file
 def process_opening_stock_data(raw_path, processed_path):
@@ -198,8 +200,9 @@ def process_opening_stock_data(raw_path, processed_path):
     # Drop the Location column after splitting the InventoryId
     opening_stock_cleaned.drop(columns=['Location'], inplace=True)
     
-    # Rename 'Store' column to 'StoreID'
+    # Rename columns
     opening_stock_cleaned.rename(columns={'Store': 'StoreID'}, inplace=True)
+    opening_stock_cleaned.rename(columns={'ItemId': 'ItemID'}, inplace=True)
     
     # Save the cleaned beginning inventory
     opening_stock_cleaned.to_csv(os.path.join(processed_path, 'OpeningStock.csv'), index=False)
