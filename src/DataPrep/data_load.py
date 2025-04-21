@@ -30,7 +30,7 @@ def run_inventory_analysis(download=False, process=True):
 # Process Dataset
 # main function to process all data files
 # returns tuple containing all processed DataFrames
-def process_all_data(raw_path='../../Data/Raw/', processed_path='../../Data/Processed/', download=False):
+def process_all_data(raw_path, processed_path, download):
     # Step 1: Download dataset if required
     if download:
         raw_path = download_dataset(raw_path)
