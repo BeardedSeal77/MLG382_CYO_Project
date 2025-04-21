@@ -105,15 +105,6 @@ def download_dataset(target_dir="../../Data/Raw"):
 # Splits the composite InventoryId column into Store, Location, and ItemId columns.
 # Returns a DataFrame with split columns.
 def split_inventory_id(df):
-    """
-    Splits the composite InventoryId column into Store, Location, and ItemId columns.
-    
-    Args:
-        df (DataFrame): DataFrame containing 'InventoryId' column
-    
-    Returns:
-        DataFrame: DataFrame with split columns
-    """
     df_copy = df.copy()
     split_cols = df_copy['InventoryId'].str.split('_', expand=True)
     df_copy['Store'] = split_cols[0]
