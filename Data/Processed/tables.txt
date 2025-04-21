@@ -1,5 +1,5 @@
 Inventory.csv:
-Brand - Gives the ItemID
+ItemID - Gives the ItemID
 Description - Gives the Item Description
 
 OpeningStock.csv:
