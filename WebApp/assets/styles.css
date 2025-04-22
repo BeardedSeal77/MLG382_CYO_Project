@@ -1,0 +1,86 @@
+/* styles.css */
+.app-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.app-header {
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.controls-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 30px;
+    align-items: flex-end;
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+}
+
+.dropdown-container {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Make dropdown menu scrollable for many options */
+.Select-menu-outer {
+    max-height: 300px !important;
+    overflow-y: auto !important;
+}
+
+.submit-button {
+    background-color: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.submit-button:hover {
+    background-color: #2980b9;
+}
+
+.graph-container {
+    margin-bottom: 40px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+    padding: 15px;
+    background-color: white;
+}
+
+.graph-container h3 {
+    color: #2c3e50;
+    margin-top: 0;
+}
+
+.results-text {
+    background-color: #e8f4f8;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.results-text h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .controls-container {
+        flex-direction: column;
+    }
+    
+    .dropdown-container {
+        width: 100%;
+    }
+}
