@@ -1,6 +1,7 @@
 # data_loader.py
 import pandas as pd
 import os
+# change these imports between render and local
 from path_utils import get_data_path
 
 def get_opening_stock(store_id, item_id):
@@ -19,7 +20,7 @@ def get_opening_stock(store_id, item_id):
             'StoreID': store_id,
             'ItemID': item_id,
             'onHand': 100,  # Default starting inventory
-            'startDate': '2025-01-01'
+            'startDate': '2024-12-31'
         }
         
         # Add to the CSV

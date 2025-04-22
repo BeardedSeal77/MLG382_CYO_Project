@@ -1,2 +1,6 @@
 Raw/
 Temp/
+Models/
+models/
+leadtime_model.pkl
+WebApp/models/leadtime_model.pkl

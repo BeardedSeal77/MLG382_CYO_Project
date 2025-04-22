@@ -5,6 +5,7 @@ from dash import html, dcc
 from dash.dependencies import Input, Output, State
 import pandas as pd
 import plotly.graph_objs as fig
+# change these imports between render and local
 from layout import create_layout
 from callback import process_selection
 from path_utils import BASE_DIR

@@ -4,9 +4,10 @@ from dash import html
 import plotly.express as px
 import datetime
 import os
-from model_runner import run_sales_forecast
+# change these imports between render and local
+from sales import run_sales_forecast
 from ledger import build_inventory_ledger
-from purchaser import apply_purchase_strategy
+from purchases import apply_purchase_strategy
 from data_loader import get_opening_stock, load_inventory_items, load_store_data
 from path_utils import get_data_path, DATA_DIR, MODELS_DIR
 
