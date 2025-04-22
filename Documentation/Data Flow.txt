@@ -1,0 +1,22 @@
+Data\Raw
+Data\Raw\BegInvFINAL12312016.csv
+Data\Raw\PurchasesFINAL12312016.csv
+Data\Raw\SalesFINAL12312016.csv
+
+
+src\DataPrep\DataLoad
+Splits composite `InventoryID` into StoreID, Location, ItemID
+Processed the dataset if Process = True
+Downloads the dataset if download = True
+Creates processed files for StoreID "1" and "2"
+Orders all dataframes to the same columns
+saves Data\Processed\ csv files
+
+
+Data\Processed
+Data\Processed\Inventory.csv
+Data\Processed\OpeningStock.csv
+Data\Processed\Purchases.csv
+Data\Processed\Sales.csv
+Data\Processed\Stores.csv
+Data\Processed\tables.txt
