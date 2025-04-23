@@ -52,8 +52,7 @@ gets fed to the models.
 Gets the sales_forecast_data.csv form the Data/final and uses that for the model training.
 
 *LEAD TIME MODEL*
-...
-makes the models and saves them to a file
+Gets data from Data/final/lead_time_data.csv for its use in training the Lead Time model.
 
 
 
