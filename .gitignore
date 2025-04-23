@@ -1,5 +1,6 @@
 Raw/
 Temp/
+__pycache__/
 
 Artifacts/Models/leadtime_model.pkl
 Artifacts/Models/sales_model.pkl
