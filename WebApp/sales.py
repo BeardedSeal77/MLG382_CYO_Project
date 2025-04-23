@@ -8,14 +8,14 @@ from path_utils import get_model_path, get_data_path
 def run_sales_forecast(store_id, item_id):
     # Path to the sales model
     sales_model_path = get_model_path('sales_model.pkl')
-    sales_model = None
+    sales_model = None # Initialize the sales model to none
     
     # Try to load the model
     if os.path.exists(sales_model_path):
         with open(sales_model_path, 'rb') as f:
             sales_model = pickle.load(f)
     else:
-        print(f"Sales model not found at {sales_model_path}. Using fallback approach.")
+        print(f"Sales model not found at {sales_model_path}.")
     
     # Generate dates from January 1 to July 31, 2025
     start_date = datetime(2025, 1, 1)
@@ -79,7 +79,7 @@ def run_sales_forecast(store_id, item_id):
     })
     
     # Save to CSV using absolute path
-    sales_path = get_data_path('sales.csv')
+    sales_path = get_data_path('sales.csv') # Save the data so it can be used in the graphing of the app
     sales_data.to_csv(sales_path, index=False)
     
     return sales_data
