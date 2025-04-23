@@ -49,7 +49,7 @@ Data\final\sales_forecast_data.csv
 gets fed to the models.
 
 *SALES FORECAST MODEL*
-...
+Gets the sales_forecast_data.csv form the Data/final and uses that for the model training.
 
 *LEAD TIME MODEL*
 ...
