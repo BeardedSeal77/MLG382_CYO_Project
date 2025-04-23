@@ -6,9 +6,9 @@ from dash.dependencies import Input, Output, State
 import pandas as pd
 import plotly.graph_objs as fig
 # change these imports between render and local
-from layout import create_layout
-from callback import process_selection
-from path_utils import BASE_DIR
+from WebApp.layout import create_layout
+from WebApp.callback import process_selection
+from WebApp.path_utils import BASE_DIR
 
 app = dash.Dash(__name__, assets_folder=os.path.join(BASE_DIR, "assets"), suppress_callback_exceptions=True)
 server = app.server

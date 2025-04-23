@@ -3,7 +3,7 @@ from dash import html, dcc
 import pandas as pd
 import os
 # change these imports between render and local
-from data_loader import load_store_data, load_inventory_items
+from WebApp.data_loader import load_store_data, load_inventory_items
 
 def create_layout():
     # Load store and item data for dropdowns

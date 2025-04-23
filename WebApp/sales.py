@@ -2,8 +2,9 @@ import pandas as pd
 import pickle
 import os
 from datetime import datetime
-from path_utils import get_model_path, get_data_path
-from data_loader import copy_model_files
+# change these imports between render and local
+from WebApp.path_utils import get_model_path, get_data_path
+from WebApp.data_loader import copy_model_files
 
 # Generate sales forecast for the given store and item
 def run_sales_forecast(store_id, item_id):

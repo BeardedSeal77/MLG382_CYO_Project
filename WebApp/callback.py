@@ -5,11 +5,11 @@ import plotly.express as px
 import datetime
 import os
 # change these imports between render and local
-from sales import run_sales_forecast
-from ledger import build_inventory_ledger
-from purchases import apply_purchase_strategy
-from data_loader import get_opening_stock, load_inventory_items, load_store_data
-from path_utils import get_data_path, DATA_DIR, MODELS_DIR
+from WebApp.sales import run_sales_forecast
+from WebApp.ledger import build_inventory_ledger
+from WebApp.purchases import apply_purchase_strategy
+from WebApp.data_loader import get_opening_stock, load_inventory_items, load_store_data
+from WebApp.path_utils import get_data_path, DATA_DIR, MODELS_DIR
 
 # Orchestrates the backend steps when a form is submitted
 # API endpoint to process the selection of store and item

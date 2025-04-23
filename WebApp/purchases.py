@@ -5,8 +5,9 @@ import pickle
 import os
 from datetime import datetime, timedelta
 import random
-from path_utils import get_model_path, get_data_path
-from data_loader import copy_model_files
+# change these imports between render and local
+from WebApp.path_utils import get_model_path, get_data_path
+from WebApp.data_loader import copy_model_files
 
 # Generate purchase orders based on inventory levels
 def apply_purchase_strategy(inventory_df, store_id, item_id):

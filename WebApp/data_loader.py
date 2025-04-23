@@ -2,7 +2,7 @@
 import pandas as pd
 import os
 # change these imports between render and local
-from path_utils import get_data_path
+from WebApp.path_utils import get_data_path
 
 # Load the opening stock data using store_id and item_id
 def get_opening_stock(store_id, item_id):

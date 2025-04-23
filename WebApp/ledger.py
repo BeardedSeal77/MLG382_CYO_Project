@@ -2,7 +2,7 @@
 import pandas as pd
 import os
 # change these imports between render and local
-from path_utils import get_data_path
+from WebApp.path_utils import get_data_path
 
 # Build the inventory ledger with opening stock and sales transactions
 def build_inventory_ledger(opening_stock_data, sales_data):
