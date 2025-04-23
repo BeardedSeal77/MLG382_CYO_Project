@@ -6,9 +6,14 @@ import os
 from datetime import datetime, timedelta
 import random
 from path_utils import get_model_path, get_data_path
+from data_loader import copy_model_files
 
 # Generate purchase orders based on inventory levels
 def apply_purchase_strategy(inventory_df, store_id, item_id):
+    
+    # using data loader, copy the leadtime_model.pkl file
+    copy_model_files("leadtime_model.pkl")
+    
     # Path to the leadtime model
     leadtime_model_path = get_model_path('leadtime_model.pkl')
     

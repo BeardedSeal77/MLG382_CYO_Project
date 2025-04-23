@@ -3,9 +3,14 @@ import pickle
 import os
 from datetime import datetime
 from path_utils import get_model_path, get_data_path
+from data_loader import copy_model_files
 
 # Generate sales forecast for the given store and item
 def run_sales_forecast(store_id, item_id):
+    
+    # using data loader, copy the sales_model.pkl file
+    copy_model_files("sales_model.pkl")
+    
     # Path to the sales model
     sales_model_path = get_model_path('sales_model.pkl')
     sales_model = None # Initialize the sales model to none
@@ -42,9 +47,14 @@ def run_sales_forecast(store_id, item_id):
         predictions = []
         initial_sales = 10
         
+        # Initialize the first prediction with initial sales 
         for i in range(len(feature_df)):
+
+            # Produce lag features, give initial sales if out of bounds
             lag_1 = predictions[i-1] if i > 0 else initial_sales
             lag_7 = predictions[i-7] if i >= 7 else initial_sales
+            
+            # Calculate rolling average for the last 7 days
             if i >= 7:
                 rolling_avg_7 = sum(predictions[i-7:i]) / 7
             elif i > 0:
@@ -52,6 +62,7 @@ def run_sales_forecast(store_id, item_id):
             else:
                 rolling_avg_7 = initial_sales
             
+            # Populate engineered features
             row = feature_df.iloc[i]
             features = {
                 'Lag_1': lag_1,
@@ -64,10 +75,12 @@ def run_sales_forecast(store_id, item_id):
             }
             X_row = pd.DataFrame([features])
             
-            pred = sales_model.predict(X_row)[0] #predict using the loaded model
+            # Predict using the loaded model
+            pred = sales_model.predict(X_row)[0]
             pred = max(1, int(round(pred)))
             predictions.append(pred)
 
+        # Produce sales quantity from model prediction
         feature_df['SalesQuantity'] = predictions
  
     # Create the sales dataframe

@@ -11,8 +11,10 @@ from purchases import apply_purchase_strategy
 from data_loader import get_opening_stock, load_inventory_items, load_store_data
 from path_utils import get_data_path, DATA_DIR, MODELS_DIR
 
+# Orchestrates the backend steps when a form is submitted
+# API endpoint to process the selection of store and item
+# This function is called when the user selects a store and item from the dropdowns
 def process_selection(store_id, item_id):
-    """Orchestrates the backend steps when a form is submitted"""
     # Create directories if they don't exist
     for directory in [DATA_DIR, MODELS_DIR]:
         if not os.path.exists(directory):

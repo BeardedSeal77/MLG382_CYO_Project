@@ -23,6 +23,7 @@ Data\Processed\Stores.csv
 Data\Processed\tables.txt
 
 *PROCESS*
+src\DataPrep\DataPrep
 loads the processed data.
 generates lead time and sales forecast data
 adding fields that help smooth the data
@@ -33,7 +34,7 @@ Data\Prepped\lead_time_data.csv
 Data\Prepped\sales_forecast_data.csv
 
 *PROCESS*
-waldo
+not sure where waldo did this
 data treatment
 outlier treatment
 This the input data is retrieved from the Data\Prepped folder,
