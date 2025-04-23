@@ -1,7 +1,5 @@
 Raw/
 Temp/
-Models/
-models/
-leadtime_model.pkl
-WebApp/models/leadtime_model.pkl
-/WebApp/models
+
+Artifacts/Models/leadtime_model.pkl
+Artifacts/Models/sales_model.pkl
