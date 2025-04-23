@@ -1,9 +1,10 @@
+*DATA*
 Data\Raw
 Data\Raw\BegInvFINAL12312016.csv
 Data\Raw\PurchasesFINAL12312016.csv
 Data\Raw\SalesFINAL12312016.csv
 
-
+*PROCESS*
 src\DataPrep\DataLoad
 Splits composite `InventoryID` into StoreID, Location, ItemID
 Processed the dataset if Process = True
@@ -12,7 +13,7 @@ Creates processed files for StoreID "1" and "2"
 Orders all dataframes to the same columns
 saves Data\Processed\ csv files
 
-
+*DATA*
 Data\Processed
 Data\Processed\Inventory.csv
 Data\Processed\OpeningStock.csv
@@ -21,12 +22,39 @@ Data\Processed\Sales.csv
 Data\Processed\Stores.csv
 Data\Processed\tables.txt
 
-The processed data is prepped in the DataPrep.ipynb notebook
+*PROCESS*
+ed
+
+*DATA*
 Data\Prepped
 Data\Prepped\lead_time_data.csv
 Data\Prepped\sales_forecast_data.csv
 
-This the input data is retrieved from the Data\Prepped folder, then outlier treatment (winsorize) is applied to the salesQuantity feature form the sales_forecast_data.csv. The winsorize outlier treatment is also applied to the Quantity feature from the lead_time_data.csv. Outlier treatment is done in the Data_understanding.ipynb notebook. After this treatment is applied the final data is exported to the final data folder as follows:
+*PROCESS*
+waldo
+data treatment
+outlier treatment
+This the input data is retrieved from the Data\Prepped folder,
+then outlier treatment (winsorize) is applied to the salesQuantity feature form the sales_forecast_data.csv.
+ The winsorize outlier treatment is also applied to the Quantity feature from the lead_time_data.csv. Outlier treatment is done in the Data_understanding.ipynb notebook. After this treatment is applied the final data is exported to the final data folder as follows:
+
+*DATA*
 Data\final
 Data\final\lead_time_data.csv
 Data\final\sales_forecast_data.csv
+
+*PROCESS*
+gets fed to the models.
+
+*SALES FORECAST MODEL*
+...
+
+*LEAD TIME MODEL*
+...
+makes the models and saves them to a file
+
+
+
+
+*WEB APP*
+
