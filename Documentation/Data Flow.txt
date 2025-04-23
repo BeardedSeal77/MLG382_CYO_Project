@@ -23,7 +23,9 @@ Data\Processed\Stores.csv
 Data\Processed\tables.txt
 
 *PROCESS*
-ed
+loads the processed data.
+generates lead time and sales forecast data
+adding fields that help smooth the data
 
 *DATA*
 Data\Prepped
@@ -57,4 +59,11 @@ makes the models and saves them to a file
 
 
 *WEB APP*
-
+loads a web app from app.py
+that runs a dash server.
+the layout.py provides the front end.
+the callback is the api layer between the website and the python backend.
+data loader loads the data from csv files to start generating a Inventory Ledger.
+the sales.py uses the sales model to predict the sales forecast for the following year.
+the sales get added to the Inventory Ledger.
+the purchases.py uses a lead time model to order stock before the stock level hits bottom line.
